@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookshelf App</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bookshelf Apps</h1>
+    </header>
+
+    <div class="wrapper">
+        <div class="container bg-white shadow" id="add-book">
+            <h2 class="container-header text-center">Tambah Buku Baru</h2>
+            <form class="form" action="#" id="formBuku">
+
+                <div class="form-group form-title">
+                    <label for="title">Judul Buku</label>
+                    <input type="text" id="titleBook" name="title" placeholder="Masukan disini..." required>
+                </div>
+
+                <div class="form-group form-title">
+                    <label for="penulis">Nama Penulis</label>
+                    <input type="text" id="authorBook" name="penulis" placeholder="Masukan disini...">
+                </div>
+
+                <div class="form-group form-title">
+                    <label for="tahun">Tahun Terbit</label>
+                    <input type="number" id="yearsBook" name="tahun" placeholder="Masukan disini...">
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="isRead" id="isCompleted" placeholder="">
+                    <label for="isRead">Selesai Dibaca</label>
+                </div>
+
+                <input type="submit" value="Simpan" name="Submit" class="submitButton">
+
+            </form>
+        </div>
+
+        <div class="container shadow">
+            <h2 class="title">Cari Buku</h2>
+            <form id="formSearch" action="" method="post">
+                <div class="form-group">
+                    <input type="text" name="pencarian" id="pencarian" placeholder="cari disini...">
+                </div>
+                <div class="form-search-buttom">
+                    <button type="submit" class="searchButton"><i class='bx bx-search-alt-2'></i></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="container shadow">
+            <h2 class="container-header">Belum Selesai Dibaca</h2>
+            <div class="list-item" id="unComplete">
+            </div>
+        </div>
+
+        <div class="container shadow">
+            <h2 class="container-header">Sudah Selesai Dibaca</h2>
+            <div class="list-item" id="isComplete">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/script.js""></script>
+
+</body>
+</html>

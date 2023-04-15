@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color:#005b8f;
+    padding: 16px;
+    color: white;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .container {
+    width: 1024px;
+    border-radius: 1rem;
+    margin: 16px;
+    background: #e7e9ffa9;
+    padding: 16px;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.item {
+    border: 1px solid var(--gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    background-color: white;
+}
+
+
+.itemTitle {
+    color: #005b8f;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.itemAuthor {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.itemAction {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.form {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    height: 450px;
+    border-radius: 16px;
+    color: #005b8f;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+input[type=text], input[type=number] {
+    font-family: Raleway, sans-serif;
+    background: #F5F1FF;
+    border: 2px solid #005b8f;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.form-check{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.form-check label{
+    color: #005b8f;
+    font-weight: bolder;
+}
+
+.searchButton{
+    align-items: right;
+}
+
+.trashButton,
+.checkButton,
+.undoButton,
+.submitButton,
+.searchButton {
+    width: fit-content;
+    font-family: Raleway, sans-serif;
+    border-radius: 16px;
+    padding: 12px 24px;
+    border: 2px solid #005b8f;
+    color: black;
+    font-size: 24px;
+    margin-top: auto;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.undoButton:hover,
+.checkButton:hover,
+.trashButton:hover,
+.submitButton:hover,
+.searchButton:hover {
+    background: #005b8f;
+    color: white;
+}
+
+input[type=text], input[type=number], .submitButton:focus{
+    outline: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-title {
+    margin: auto 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        margin: 0;
+    }
+
+    .wrapper .container {
+        width: 100%;
+    }
+
+    .item{
+        width: 100%;
+    }
+
+    .search-container{
+        width: 100%;
+    }
+
+    .list-item {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
